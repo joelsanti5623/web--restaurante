@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Fogolar - Barichara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🔥 Al Fogolar</h1>
+        <p id="subtitle" class="subtitle">Barichara, Santander</p>
+        
+        <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 0.5rem;">
+            <button id="langBtn" class="currency-toggle">🇬🇧 English</button>
+            
+            <div id="currencyContainer">
+                <button id="currencyBtn" class="currency-toggle">💱 Moneda: COP</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tabs-nav">
+        <button class="tab-btn active" onclick="showSection('inicio', event)">🏠 Inicio</button>
+        <button class="tab-btn" onclick="showSection('historia', event)">📖 Historia</button>
+        <button class="tab-btn" onclick="showSection('menu', event)">🍽️ Menú</button>
+        <button class="tab-btn" onclick="showSection('ubicacion', event)">📍 Ubicación</button>
+        <button class="tab-btn" onclick="showSection('opiniones', event)">💬 Opiniones</button>
+        <button class="tab-btn" onclick="showSection('juego', event)">🎮 Minijuego</button>
+    </nav>
+
+    <main class="container">
+        
+      <!-- SECCIÓN 1: INICIO -->
+<section id="inicio" class="content-section active-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVQCUQN3mgV6B9n-JdiTAnOWSWuoHaL9N_F-2PNLuRIQ&s') center/cover no-repeat; padding: 7rem 2rem; min-height: 500px; flex-direction: column; justify-content: center; align-items: center; border-radius: 12px; color: white; margin-bottom: 2rem; text-align: center;">
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <span style="background: #bc6c25; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;" id="badgeText">Barichara - Santander</span>
+        
+        <h1 style="font-size: 2.8rem; margin: 1rem 0; font-family: serif; color: white;" id="inicioTitle">
+            El Encuentro de dos Culturas en una Fusión Única
+        </h1>
+        
+        <p style="font-size: 1.15rem; margin-bottom: 2rem; line-height: 1.6; color: #f4f1de;" id="inicioSubtitle">
+            Disfruta de la auténtica gastronomía artesanal italiana con el alma y los ingredientes tradicionales de nuestra tierra santandereana. Ubicados en la histórica Antigua Casa Encanto.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#menu" id="exploreMenuBtn" style="background: #bc6c25; color: white; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Explorar Menú</a>
+            <a href="https://wa.me/573104137524" id="reserveBtn" target="_blank" style="background: #25d366; color: white; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">Reservar Mesa</a>
+        </div>
+    </div>
+
+    <!-- Tarjetas inferiores de características (DENTRO de la sección de inicio) -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left; padding: 0 0.5rem; margin-bottom: 3rem; margin-top: 3rem; width: 100%;">
+        <div style="background: #fdfbf7; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #bc6c25; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 id="expCocinaTitle" style="color: #7f4f24; margin-bottom: 0.5rem; font-size: 1.2rem;">🍳 Cocina Artesanal</h3>
+            <p id="expCocinDesc" style="color: #666; font-size: 0.95rem; margin: 0;">Preparaciones cuidadas al detalle cada día, combinando técnicas tradicionales y frescura inigualable.</p>
+        </div>
+        
+        <div style="background: #fdfbf7; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #bc6c25; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 id="expMagiaTitle" style="color: #7f4f24; margin-bottom: 0.5rem; font-size: 1.2rem;">🏛️ Magia Colonial</h3>
+            <p id="expMagiaDesc" style="color: #666; font-size: 0.95rem; margin: 0;">Un espacio mágico en la Antigua Casa Encanto, a solo unos pasos del parque principal.</p>
+        </div>
+        
+        <div style="background: #fdfbf7; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #bc6c25; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 id="expAmbienteTitle" style="color: #7f4f24; margin-bottom: 0.5rem; font-size: 1.2rem;">🍷 Ambiente Acogedor</h3>
+            <p id="expAmbienteDesc" style="color: #666; font-size: 0.95rem; margin: 0;">El lugar perfecto para compartir en pareja, con amigos o en familia disfrutando de una experiencia única.</p>
+        </div>
+    </div>
+
+</section>
+
+        <!-- SECCIÓN 2: HISTORIA -->
+        <section id="historia" class="content-section">
+            <div class="welcome-box" style="max-width: 800px;">
+                <h2 style="text-align: center; color: #7f4f24; margin-bottom: 1.5rem; border: none; padding: 0;" id="historyTitle">Dos Mundos, Un Solo Fogón: La Historia de Al Fogolar</h2>
+                
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7RgL0LswT9oN9dGgke7PfLQxqZXyfNUGcXOzgD0KbEA&s" alt="Al Fogolar Barichara" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 8px; border: 2px solid #d4a373;">
+                </div>
+
+                <p style="line-height: 1.6; color: #444; margin-bottom: 1rem;" id="historyText1">
+                    En el noreste y el sur de Italia, el "Fogolar" es mucho más que un simple espacio físico; representa el fogón tradicional, el fuego sagrado y el rincón del hogar donde la familia se reúne a compartir la vida alrededor de una buena mesa. Con esa misma filosofía de calidez, unión y hospitalidad, nacimos en Barichara hace más de una década, con el propósito de crear un refugio gastronómico donde cada comensal se sintiera como en casa, cobijado por la magia colonial del pueblo más lindo de Colombia.
+                </p>
+
+                <p style="line-height: 1.6; color: #444; margin-bottom: 1rem;" id="historyText2">
+                    Nuestra historia comenzó como un homenaje a las raíces italianas, ofreciendo pastas artesanales moldeadas completamente a mano y pizzas crujientes horneadas con el respeto absoluto a los legados del viejo continente. Sin embargo, al estar inmersos en la profunda riqueza cultural de Santander, nuestra cocina vivió una evolución natural. Inspirados por los ingredientes locales y el entorno, decidimos fusionar las técnicas europeas con la identidad de la región. El resultado fue una propuesta gastronómica única en su tipo, donde la delicadeza de un ravioli hecho en casa convive en perfecta armonía con el carácter y la fuerza de platos tradicionales de la provincia, como nuestro icónico cabro, las costillas de res y las costillitas de cerdo tiernas.
+                </p>
+
+                <div style="text-align: center; margin: 1.5rem 0;">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/31/9d/61/3f/caption.jpg" alt="Antigua Casa Encanto Al Fogolar" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 8px; border: 2px solid #d4a373;">
+                </div>
+
+                <p style="line-height: 1.6; color: #444;" id="historyText3">
+                    Tras años de consolidar nuestra esencia frente a la emblemática Catedral de Barichara, hoy escribimos un nuevo capítulo desde nuestra sede en la Antigua Casa Encanto. En este nuevo espacio, conservamos intacta la imponente arquitectura de tapia pisada y piedra labrada que caracteriza la historia del municipio, elevando la experiencia para ofrecer no solo grandes sabores, sino también un ambiente lleno de arte, comodidad y una evolución culinaria que sigue uniendo lo mejor de dos mundos en un solo fogón.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: MENÚ -->
+        <section id="menu" class="content-section">
+            <h2 id="menuTitle">Carta Tradicional</h2>
+            <div class="menu-grid" id="menuGrid">
+                
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=300&q=80" alt="Carne Oreada">
+                    <div class="menu-info">
+                        <div>
+                            <h3 id="dish1Title">Carne Oreada con Yuca</h3>
+                            <p id="dish1Desc">Marinada al sol con especias locales y hogao.</p>
+                        </div>
+                        <span class="price" data-cop="32000" data-usd="8.00">$ 32.000 COP</span>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" alt="Cabro con Pepitoria">
+                    <div class="menu-info">
+                        <div>
+                            <h3 id="dish2Title">Cabro con Pepitoria</h3>
+                            <p id="dish2Desc">Asado al carbón con su tradicional pepitoria.</p>
+                        </div>
+                        <span class="price" data-cop="38000" data-usd="9.50">$ 38.000 COP</span>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80" alt="Arepas Carisecas">
+                    <div class="menu-info">
+                        <div>
+                            <h3 id="dish3Title">Arepas Carisecas</h3>
+                            <p id="dish3Desc">Horneadas en leña con miel de panela.</p>
+                        </div>
+                        <span class="price" data-cop="8000" data-usd="2.00">$ 8.000 COP</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: UBICACIÓN -->
+        <section id="ubicacion" class="content-section">
+            <div class="welcome-box" style="max-width: 800px; text-align: center;">
+                <h2 style="color: #7f4f24; margin-bottom: 1rem; border: none; padding: 0;" id="ubicacionTitle">Ubicación</h2>
+                <p style="color: #555; margin-bottom: 1.5rem; line-height: 1.6;" id="ubicacionText">
+                    Nos encontramos ubicados en el hermoso municipio de Barichara, Santander. ¡Visítanos en nuestra nueva sede y vive una experiencia inolvidable!
+                </p>
+
+                <div style="background: #fdfbf7; padding: 1.2rem; border-radius: 8px; border: 1px solid #d4a373; margin-bottom: 1.5rem; text-align: left; display: inline-block; width: 100%;">
+                    <p style="margin: 0.5rem 0; color: #444;" id="addressInfo">📍 <strong>Dirección:</strong> Cl. 6 #5-68 (A media cuadra del parque principal), Barichara, Santander</p>
+                    <p style="margin: 0.5rem 0; color: #444;" id="hoursInfo">🕒 <strong>Horarios:</strong> Lunes a Domingo de 12:00 p.m. a 9:00 p.m.</p>
+                    <p style="margin: 0.5rem 0; color: #444;" id="howToGetThere">🚗 <strong>Cómo llegar:</strong> Estamos a solo media cuadra del parque principal de Barichara. ¡Fácil de ubicar en el centro histórico!</p>
+                    <p style="margin: 0.5rem 0; color: #444;" id="priceInfo">💲 <strong>Precio promedio por persona:</strong> $40,000 - $60,000 COP</p>
+                </div>
+
+                <div style="overflow: hidden; border-radius: 8px; border: 2px solid #d4a373; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                   <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.2!2d-73.23!3d6.64!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e40c3c3c3c3c3c3%3A0x0!2sBarichara%2C%20Santander%2C%20Colombia!5e0!3m2!1ses!2sco!4v1700000000000" 
+                    width="100%" 
+                    height="380" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                   </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: OPINIONES -->
+        <section id="opiniones" class="content-section">
+            <h2 style="text-align: center; margin-bottom: 1.5rem; border: none; padding: 0;" id="opinionsMainTitle">Opiniones de nuestros visitantes</h2>
+            
+            <div id="generalReviewsList" class="reviews-container" style="background: #fff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                <p class="review">⭐⭐⭐⭐⭐ "¡La mejor carne oreada de todo Barichara!" - Carlos M. <small style="color: gray;">(Carne Oreada con Yuca)</small></p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 0.8rem 0;">
+                <p class="review">⭐⭐⭐⭐ "Sabor auténtico y tradicional. Excelente servicio." - Sarah T. <small style="color: gray;">(Cabro con Pepitoria)</small></p>
+            </div>
+
+            <div class="review-form-box">
+                <h3 id="formTitle">💬 Deja tu Opinión</h3>
+                <form id="userReviewForm">
+                    <select id="selectDish" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.8rem; border-radius: 4px; border: 1px solid #ccc;">
+                        <option value="" disabled selected>Selecciona el plato que probaste...</option>
+                        <option value="Carne Oreada con Yuca">Carne Oreada con Yuca</option>
+                        <option value="Cabro con Pepitoria">Cabro con Pepitoria</option>
+                        <option value="Arepas Carisecas">Arepas Carisecas</option>
+                    </select>
+
+                    <select id="selectRating" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.8rem; border-radius: 4px; border: 1px solid #ccc;">
+                        <option value="" disabled selected>Calificación en estrellas...</option>
+                        <option value="5">⭐⭐⭐⭐⭐ (5/5 Excelente)</option>
+                        <option value="4">⭐⭐⭐⭐ (4/5 Muy bueno)</option>
+                        <option value="3">⭐⭐⭐ (3/5 Bueno)</option>
+                        <option value="2">⭐⭐ (2/5 Regular)</option>
+                        <option value="1">⭐ (1/5 Malo)</option>
+                    </select>
+
+                    <input type="text" id="inputName" placeholder="Tu nombre" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.8rem; border-radius: 4px; border: 1px solid #ccc;">
+                    <textarea id="inputComment" placeholder="Escribe tu reseña aquí..." rows="3" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.8rem; border-radius: 4px; border: 1px solid #ccc;"></textarea>
+                    
+                    <button type="submit" id="btnSubmitReview" class="currency-toggle" style="width: 100%; cursor: pointer;">Enviar Reseña</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: MINIJUEGO -->
+        <section id="juego" class="content-section">
+            <h2 style="text-align: center; margin-bottom: 0.5rem; border: none; padding: 0;" id="gameMainTitle">¡Atrapa la Arepa!</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 1rem;" id="gameSubTitle">Mueve la canasta con las flechas del teclado o el mouse para atrapar las arepas y ganar puntos.</p>
+            
+            <div style="text-align: center; margin-bottom: 1rem;">
+                <span style="font-weight: bold; font-size: 1.2rem;" id="scoreText">Puntuación: 0</span>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <canvas id="gameCanvas" width="400" height="400" style="background: #fdfbf7; border: 3px solid #7f4f24; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); cursor: pointer;"></canvas>
+            </div>
+
+            <div style="text-align: center; margin-top: 1rem;">
+                <button id="startBtn" class="currency-toggle" style="cursor: pointer; padding: 0.6rem 1.5rem; font-size: 1rem;">▶️ Iniciar Juego</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales</p>
+        <div style="margin: 0.5rem 0;">
+            <a href="https://www.instagram.com/alfogolarbarichara/" class="currency-toggle" style="text-decoration: none; display: inline-block; padding: 0.4rem 0.8rem; margin: 0 0.2rem;">Instagram</a>
+            <a href="https://wa.me/573104137524" class="currency-toggle" style="text-decoration: none; display: inline-block; padding: 0.4rem 0.8rem; margin: 0 0.2rem;">WhatsApp</a>
+            <a href="https://www.facebook.com/alfogolarbarichara" class="currency-toggle" style="text-decoration: none; display: inline-block; padding: 0.4rem 0.8rem; margin: 0 0.2rem;">Facebook</a>
+            <a href="https://www.youtube.com/channel/UCmAPlU9rrm96uigHNdXMEpQ" class="currency-toggle" style="text-decoration: none;" target="_blank">YouTube</a>
+        </div>
+        <p style="margin: 0.4rem 0; font-size: 0.9rem;">📞 Teléfono: <a href="tel:+573104137524" style="color: inherit; text-decoration: none;">+57 310 4137524</a></p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem;">&copy; 2026 Al Fogolar - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- En el pie de página o donde prefiera poner el botón de acceso -->
+<div class="admin-access-container" style="margin-top: 20px; text-align: center;">
+    <button id="btnAccesoAdmin" onclick="verificarAccesoAdmin()" style="background: transparent; border: none; color: #888; cursor: pointer; font-size: 0.9rem;">
+        🔐 Acceso Empleados / Administrador
+    </button>
+</div>
+
+<!-- Panel de Administración (Oculto por defecto) -->
+<section id="panelAdministracion" style="display: none; max-width: 600px; margin: 30px auto; padding: 20px; border: 2px dashed #d9534f; border-radius: 8px; background: #fff8f8;">
+    <h3 style="color: #d9534f; text-align: center;">Panel de Gestión - Al Fogolar</h3>
+    <p style="text-align: center; font-size: 0.9rem; color: #666;">Sección exclusiva para registrar nuevos platos en la carta.</p>
+    
+    <form id="formNuevoPlato" style="display: flex; flex-direction: column; gap: 12px;">
+        <div>
+            <label style="display: block; font-weight: bold; margin-bottom: 4px;">Nombre del Plato (Español):</label>
+            <input type="text" id="nombreEsp" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        
+        <div>
+            <label style="display: block; font-weight: bold; margin-bottom: 4px;">Nombre del Plato (Inglés):</label>
+            <input type="text" id="nombreEng" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <div>
+            <label style="display: block; font-weight: bold; margin-bottom: 4px;">Descripción:</label>
+            <textarea id="descripcionPlato" rows="3" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div style="flex: 1;">
+                <label style="display: block; font-weight: bold; margin-bottom: 4px;">Precio (COP):</label>
+                <input type="number" id="precioCop" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <label style="display: block; font-weight: bold; margin-bottom: 4px;">Precio (USD):</label>
+                <input type="number" step="0.01" id="precioUsd" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+        </div>
+
+        <div>
+            <label style="display: block; font-weight: bold; margin-bottom: 4px;">URL de la Imagen:</label>
+            <input type="url" id="imagenPlato" placeholder="https://ejemplo.com/imagen.jpg" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button type="submit" style="flex: 2; background: #28a745; color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Guardar Plato</button>
+            <button type="button" onclick="cerrarPanelAdmin()" style="flex: 1; background: #6c757d; color: white; padding: 10px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Cerrar Panel</button>
+        </div>
+    </form>
+</section>
+
+    <script src="app.js"></script>
+</body>
+</html>
